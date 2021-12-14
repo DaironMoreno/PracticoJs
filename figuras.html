@@ -7,7 +7,40 @@
     <title>Figuras Geómetricas</title>
 </head>
 <body>
-    <h1>Figuras Geómetricas</h1>
+    <head>
+        <h1>Figuras Geómetricas</h1>
+        <section>
+            <h2>Calcula el área y perímetro de un cuadrado</h2>
+            <form>
+                <label for="area">Cuanto miden los lados del cuadrado</label>
+                <input type="number" name="area" id="area"><br>
+                <label for="perimetro">2Cuanto miden los lados del cuadrado</label>
+                <input type="number" name="perimetro" id="perimetro"><br>
+                <button id="calculaArea" onclick="calcularArea()";>
+                    Calcular Área</button>
+                <button id="calculaPerimetro" onclick="calcularPerimetro()";>
+                    Calcular Perimetro</button>
+                
+            </form>
+        </section>
+        <br>
+        <section>
+            <h2>Calcula el área y perímetro de un Triángulo</h2>
+            <form>
+                <label for="lado1">Cuanto miden los lados del Triángulo</label><br>
+                lado 1:<input type="number" name="lado1" id="lado1"><br>
+                lado 2:<input type="number" name="lado2" id="lado2"><br>
+                lado 3:<input type="number" name="lado3" id="lado3"><br>
+                <label for="perimetroT">Si deseas saber el área del triángulo </label><br>    
+                Altura:<input type="number" name="altura" id="altura"><br>
+                <button id="calculaArea" onclick="calcularAreaT()";>
+                    Calcular Área</button>
+                <button id="calculaPerimetro" onclick="calcularPerimetroT()";>
+                    Calcular Perimetro</button>
+                
+            </form>
+        </section>
+    </head>
 
 
 

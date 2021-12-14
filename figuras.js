@@ -4,6 +4,18 @@ const PerimetroCuadrado = (lado) => lado * 4 ;
 
 const AreaCuadrado = (lado) => lado * lado;
 
+
+function calcularArea(){
+    const valor = document.getElementById("area").value;
+    const calculoDeArea = AreaCuadrado(valor);
+    return alert(calculoDeArea);
+}
+function calcularPerimetro()
+{
+    const valor = document.getElementById("perimetro").value;
+    const calculoDeperimetro = PerimetroCuadrado(valor);
+    return alert(calculoDeperimetro);
+}
 //triángulo
 // ARROW FUNCTION PERO SIN RETURN IMPLICITO
 const perimetroTriangulo = (Lado1 , Lado2, base) => {
@@ -13,8 +25,6 @@ const perimetroTriangulo = (Lado1 , Lado2, base) => {
 function areaTriangulo(base, altura) {
     return (base * altura) / 2 
 };
-
-
 
 
 // areá del circulo
