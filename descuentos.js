@@ -20,6 +20,16 @@ const Calculardescuento = () =>
     const cupon = document.getElementById("cupon").value;
     const ResultadoP = document.getElementById("ResultadoP");
     
+    
+        if(!cupones.includes(cupon))
+        {
+            return ResultadoP.innerText = " El cupon " + cupon +  "  no existe";
+        }
+        
+    
+
+
+
     let descuento ;
     switch(cupon)
     {
