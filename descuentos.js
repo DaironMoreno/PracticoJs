@@ -8,50 +8,50 @@ const calcularDescuento = (precio,descuento) =>
     return resultadoDelDescuento;
 }
 
-const Calculardescuento = () => 
+const GestionDeCupones = () => 
 {
     const cupones = [
-        "primer_Cupon",
-        "segundo_Cupon",
-        "tercer_cupon"
+        {
+            name : "primer_Cupon",
+            descuento: 10
+        },
+        {
+            name : "segundo_Cupon",
+            descuento: 20
+        },
+        {
+            name : "tercer_Cupon",
+            descuento: 30
+        }
     ];
+
     const precio = document.getElementById("precio").value;
     /*const descuento = document.getElementById("descuento").value;*/
     const cupon = document.getElementById("cupon").value;
     const ResultadoP = document.getElementById("ResultadoP");
     
-    
-        if(!cupones.includes(cupon))
-        {
-            return ResultadoP.innerText = " El cupon " + cupon +  "  no existe";
-        }
-        
-    
-
-
-
-    let descuento ;
-    switch(cupon)
+    const validarCupon = (cupones) =>
     {
-        case cupones[0]:
-        descuento = 10;
-        break;
-        case cupones[1]:
-        descuento = 15;
-        break;
-        case cupones[2]:
-        descuento = 20;
-        break;
-        default:
-            descuento = 0;    
-        break;
-
+        return cupones.name === cupon;
     }
-    
-    const resultado = calcularDescuento(precio,descuento);
+
+    const UserCupon = cupones.find(validarCupon);
+
+    if(!UserCupon)
+    {
+        return ResultadoP.innerText = "El Cupon ingresado es Incorrecto";
+    }else{
+        const descuento = cupones.descuento;
+        const resultado = calcularDescuento(precio,descuento)
+        return ResultadoP.innerText = "El monto a pagar con el descuento otorgado es $" +resultado;
+    }
+
+
+}
     
 
-    return ResultadoP.innerText = "El monto a pagar con el descuento otorgado es $" +resultado;
     
-}
+
+    
+
 
